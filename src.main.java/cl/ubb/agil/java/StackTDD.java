@@ -1,21 +1,34 @@
 package cl.ubb.agil.java;
 
 public class StackTDD {
-	int[] stackPila=new int[2];
+	int[] stackPila;
+	int vac;
 
-	public StackTDD() {
+	public StackTDD(int tam) {
+		stackPila = new int[tam];
+		vac = -1;
 	}
 
 	public boolean EstaVaciaPila() {
-		return true;
+		if (vac == -1) {
+			return true;
+		}
+		return false;
 	}
 
-	public int InsertarPila(int num) {
-		stackPila[0] = num;
-		if (stackPila[0] == 1) {
-			return 1;
+	public boolean InsertarPila(int num){
+		if(vac==-1){
+			stackPila[0]=num;
+			return true;
 		}
-		return 0;
+		for(int i=vac;i<stackPila.length;i++){
+			stackPila[i]=num;
+			vac ++;
+		}
+		if(vac != -1){
+			return true;
+		}
+		return false;
 	}
 
 }
