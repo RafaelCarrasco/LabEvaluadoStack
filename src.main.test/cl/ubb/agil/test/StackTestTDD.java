@@ -16,6 +16,13 @@ public class StackTestTDD {
 		boolean result=stack.EstaVaciaPila();
 		assertThat(result,is(true));
 	}
+	@Test
+	public void InsertarUnoEnPila(){
+		StackTDD stack =new StackTDD();
+		int result =stack.InsertarPila(1);
+		assertThat(result,is(1));
+		
+	}
 	
 
 }
