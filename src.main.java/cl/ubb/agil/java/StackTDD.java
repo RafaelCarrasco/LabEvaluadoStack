@@ -23,12 +23,18 @@ public class StackTDD {
 		}
 		for(int i=vac;i<stackPila.length;i++){
 			stackPila[i]=num;
+			System.out.println(stackPila[i]);
 			vac ++;
 		}
 		if(vac != -1){
 			return true;
 		}
 		return false;
+	}
+	
+	public int Tamaño(){
+		return stackPila.length -1;
+		
 	}
 
 }
