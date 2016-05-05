@@ -16,28 +16,28 @@ public class StackTDD {
 		return false;
 	}
 
-	public boolean InsertarPila(int num){
-		if(vac==-1){
-			stackPila[0]=num;
+	public boolean InsertarPila(int num) {
+		if (vac == -1) {
+			stackPila[0] = num;
 			return true;
 		}
-		for(int i=vac;i<stackPila.length;i++){
-			stackPila[i]=num;
+		for (int i = vac; i < stackPila.length; i++) {
+			stackPila[i] = num;
 			System.out.println(stackPila[i]);
-			vac ++;
+			vac++;
 		}
-		if(vac != -1){
+		if (vac != -1) {
 			return true;
 		}
 		return false;
 	}
-	
-	public int Tamaño(){
-		return stackPila.length -1;		
+
+	public int Tamaño() {
+		return stackPila.length - 1;
 	}
-	
-	public int pop(){
-		int val= stackPila[0];
+
+	public int pop() {
+		int val = stackPila[0];
 		return val;
 	}
 

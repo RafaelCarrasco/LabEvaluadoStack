@@ -62,5 +62,14 @@ public class StackTestTDD {
 		int valor=stack.pop();
 		assertThat(valor,is(2));
 	}
+	@Test
+	public void IngresaTresYCuatroHacePopDosVecesEntraga4Y3(){
+		stack.InsertarPila(3);
+		stack.InsertarPila(4);
+		int valor=stack.pop();
+		assertThat(valor,is(3));
+		int val2=stack.pop();
+		assertThat(val2,is(4));
+	}
 
 }
