@@ -4,6 +4,7 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
+
 import org.junit.Before;
 
 import cl.ubb.agil.java.StackTDD;
@@ -47,6 +48,19 @@ public class StackTestTDD {
 		assertThat(res2, is(true));
 		int tam = stack.Tamaño();
 		assertThat(tam, is(2));
+	}
+	@Test
+	public void InsertaUnoHacePopEntragaUno(){
+		stack.InsertarPila(1);
+		int valor=stack.pop();
+		assertThat(valor,is(1));
+}
+	@Test
+	public void InsertaUnoYDosHacePopEntregaDos(){
+		stack.InsertarPila(1);
+		stack.InsertarPila(2);
+		int valor=stack.pop();
+		assertThat(valor,is(2));
 	}
 
 }

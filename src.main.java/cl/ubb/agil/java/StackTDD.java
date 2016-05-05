@@ -33,8 +33,12 @@ public class StackTDD {
 	}
 	
 	public int Tamaño(){
-		return stackPila.length -1;
-		
+		return stackPila.length -1;		
+	}
+	
+	public int pop(){
+		int val= stackPila[0];
+		return val;
 	}
 
 }
